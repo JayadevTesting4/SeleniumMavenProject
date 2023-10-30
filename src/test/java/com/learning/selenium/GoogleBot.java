@@ -12,7 +12,7 @@ public class GoogleBot {
 		driver.get("http://www.google.com");
 		driver.findElement(By.name("q")).sendKeys("Automation");
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		driver.quit();
 	}
 }
