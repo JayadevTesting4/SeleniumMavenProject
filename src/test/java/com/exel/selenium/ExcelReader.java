@@ -19,11 +19,11 @@ public class ExcelReader {
 
 		try {
 			FileInputStream fis = new FileInputStream(new File("./data/testdata.xlsx"));
-			@SuppressWarnings("resource")
-			XSSFWorkbook wb = new XSSFWorkbook(fis);
-			XSSFSheet sheet = wb.getSheet("Sheet1");
-			String data = sheet.getRow(0).getCell(0).getStringCellValue();
-			System.out.println(data);
+			try (XSSFWorkbook wb = new XSSFWorkbook(fis)) {
+				XSSFSheet sheet = wb.getSheet("Sheet1");//LoginData is the exel sheet name by own type
+				String data = sheet.getRow(0).getCell(0).getStringCellValue();
+				System.out.println(data);
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

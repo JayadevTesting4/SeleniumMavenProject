@@ -15,7 +15,6 @@ public class ImplicitWaitDemo {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		//selenium wait site
 		driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
 		driver.findElement(By.id("display-other-button")).click();
 		driver.findElement(By.id("hidden")).click();

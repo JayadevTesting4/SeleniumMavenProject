@@ -12,7 +12,7 @@ public class ExcelReader1 {
 			FileInputStream fis = new FileInputStream(new File("./data/testdata.xlsx"));
 			@SuppressWarnings("resource")
 			XSSFWorkbook wb = new XSSFWorkbook(fis);
-			XSSFSheet sheet = wb.getSheet("Sheet1");
+			XSSFSheet sheet = wb.getSheet("Sheet1");//LoginData is the exel sheet name by own type
 //			String data = sheet.getRow(1).getCell(2).getStringCellValue();
 //			System.out.println(data);
 			int lastRowNumber = sheet.getLastRowNum();
